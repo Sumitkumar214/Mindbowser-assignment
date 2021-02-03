@@ -1,0 +1,63 @@
+<br>
+<div class="container">
+  <h1 class="text-center">Add Employee</h1>
+</div>
+<div class="card my-5">
+  <div [hidden]="submitted" class="card-body">
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+      <div class="container col-md-6">
+        <div class="form-group">
+          <label for="name">Employee Id</label>
+          <input type="number" [(ngModel)]="employee.empid" class="form-control" id="empid" name="empid"
+            placeholder="Enter your Employee Id" required #empid="ngModel">
+          <div [hidden]="!empid.pristine" class="alert alert-danger">Employee Id is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">First Name</label>
+          <input type="text" [(ngModel)]="employee.firstname" class="form-control" id="firstname" name="firstname"
+            placeholder="Enter your first name" required #firstname="ngModel">
+          <div [hidden]="!firstname.pristine" class="alert alert-danger">First Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">Last Name</label>
+          <input type="text" [(ngModel)]="employee.lastname" class="form-control" id="lastname" name="lastname"
+            placeholder="Enter your last name" required #lastname="ngModel">
+          <div [hidden]="!lastname.pristine" class="alert alert-danger">Last Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">Address</label>
+          <input type="text" [(ngModel)]="employee.address" class="form-control" id="address" name="address"
+            placeholder="Enter your Address" required #address="ngModel">
+          <div [hidden]="!address.pristine" class="alert alert-danger">Address is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">Date of Birth</label>
+          <input type="date" [(ngModel)]="employee.dob" class="form-control" id="dob" name="dob"
+            placeholder="Enter your Date of Birth" required #dob="ngModel">
+          <div [hidden]="!dob.pristine" class="alert alert-danger">Date of Birth is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">Mobile</label>
+          <input type="number" [(ngModel)]="employee.mobile" class="form-control" id="mobile" name="mobile"
+            placeholder="Enter your Mobile Number" required #mobile="ngModel">
+          <div [hidden]="!mobile.pristine" class="alert alert-danger">Mobile number is required</div>
+        </div>
+        <div class="form-group">
+          <label for="name">City</label>
+          <input type="text" [(ngModel)]="employee.city" class="form-control" id="city" name="city"
+            placeholder="Enter your City Name" required #city="ngModel">
+          <div [hidden]="!city.pristine" class="alert alert-danger">City name is required</div>
+        </div>
+        <button type="submit" [disabled]="!employeeForm.form.valid" class="btn btn-info">Submit</button>
+        <div class="col-md-12" style="text-align:right ;color: navy"  >
+          <a routerLink="/welcome" class="btn btn-info">Back</a>
+      </div>
+      </div>
+    </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+    <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+  </div>
+</div>
+
