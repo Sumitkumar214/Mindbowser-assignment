@@ -1,0 +1,49 @@
+
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a  style= "color: aqua" class="navbar-brand">MindBowser Dashboard</a></div>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li>
+                <a *ngIf="isLoggedIn" class="nav-link" style="color: aqua;" href="/logout" (click)=handleLogout()>Logout</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card bg-dark my-5">
+        <div class="card-body">
+          <h2 class="card-title text-center text-white py-3">Manager's Portal</h2>
+          <ul class="text-center list-inline py-3">
+            <li class="list-inline-item">
+              <a routerLink="/users" class="btn btn-info">List Users</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/adduser" class="btn btn-info">Add User</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/managers" class="btn btn-info">List managers</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/addmanager" class="btn btn-info">Add Manager</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/employees" class="btn btn-info">List Employees</a>
+            </li>
+            <li class="list-inline-item">
+              <a routerLink="/addemployee" class="btn btn-info">Add Employee</a>
+            </li>
+            <li  class="list-inline-item">
+              <a *ngIf="isLoggedIn" class="btn btn-info" href="/logout" (click)=handleLogout()>Logout</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div> -->
+
+<router-outlet></router-outlet>
